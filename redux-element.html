@@ -1,0 +1,34 @@
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+<link rel="import" href="./bower_components/polymer/lib/elements/dom-repeat.html">
+
+<link rel="import" href="todo-list.html">
+<link rel="import" href="todo-input.html">
+
+<dom-module id="redux-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <todo-input></todo-input>
+    <todo-list></todo-list>
+  </template>
+
+  <script>
+    /**
+     * `redux-element`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ReduxElement extends Polymer.Element {
+      static get is() { return 'redux-element'; }
+      static get properties() {};
+    }
+
+    window.customElements.define(ReduxElement.is, ReduxElement);
+  </script>
+</dom-module>
